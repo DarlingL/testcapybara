@@ -3,7 +3,7 @@ Dado(/^que eu esteja na pagina principal do google$/) do
 end
 
 Dado(/^digito na busca Cruzeiro Globo Esporte$/) do
-  fill_in id:"lst-ib", with:"Cruzeiro GloboEsporte"
+  fill_in id:"lst-ib", with:"Cruzeiro Globo Esporte"
 end
 
 Dado(/^Clico em Buscar$/) do
