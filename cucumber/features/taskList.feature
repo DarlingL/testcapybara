@@ -1,10 +1,10 @@
 # language: pt
 
 Funcionalidade: Pesquisa no Google
+Afim de reazlizar buscas e acessar paginas conforme desejado
 
-Cenário:
-Dado que eu esteja na pagina principal do google
-E digito na busca Cruzeiro Globo Esporte
-E Clico em Buscar 
-E Seleciono o primeiro resulto
-Então estarei na pagina do melhor time do mundo
+Cenário: Acessar a pagina do melhor time do mundo
+Dado que esteja na Home do google
+Quando realizada uma busca por Cruzeiro Globo Esporte
+E selecionado o primeiro resultado
+Então estarei na pagina do melhor time do mundo 

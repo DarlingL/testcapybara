@@ -1,20 +1,25 @@
-Dado(/^que eu esteja na pagina principal do google$/) do
-  visit  "http://www.google.com.br/"
+Dado(/^que esteja na Home do google$/) do
+ $home = HomeGoogle.new
+ $home.load_page
+ $googleactions = GoogleBusca.new
 end
 
-Dado(/^digito na busca Cruzeiro Globo Esporte$/) do
-  fill_in id:"lst-ib", with:"Cruzeiro Globo Esporte"
+Quando(/^realizada uma busca por Cruzeiro Globo Esporte$/) do
+ $googleactions.busca_melhor
 end
 
-Dado(/^Clico em Buscar$/) do
-  find(:id, 'hplogo').click
-  find(:xpath, '//*[@id="tsf"]/div[2]/div[3]/center/input[1]').click
-end
-
-Dado(/^Seleciono o primeiro resulto$/) do
-  click_on "cruzeiro | GloboEsporte.com"
+Quando(/^selecionado o primeiro resultado$/) do
+   $googleactions.sele_melhor
 end
 
 Entao(/^estarei na pagina do melhor time do mundo$/) do
- page.has_content? (:class ['header-editoria--link ellip-line'])
+   $googleactions.confir_melhor
 end
+
+
+
+
+
+
+
+
