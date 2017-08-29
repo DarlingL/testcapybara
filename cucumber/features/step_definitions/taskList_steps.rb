@@ -1,25 +1,18 @@
+# teste
 Dado(/^que esteja na Home do google$/) do
- $home = HomeGoogle.new
- $home.load_page
- $googleactions = GoogleBusca.new
+  @home = Homegoogle.new
+  @home.load_page
+  @googleactions = Googlebusca.new
 end
 
 Quando(/^realizada uma busca por Cruzeiro Globo Esporte$/) do
- $googleactions.busca_melhor
+  @googleactions.busca
 end
 
 Quando(/^selecionado o primeiro resultado$/) do
-   $googleactions.sele_melhor
+  @googleactions.seleciona
 end
 
 Entao(/^estarei na pagina do melhor time do mundo$/) do
-   $googleactions.confir_melhor
+  @googleactions.confirma
 end
-
-
-
-
-
-
-
-
