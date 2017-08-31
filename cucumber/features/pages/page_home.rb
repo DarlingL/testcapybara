@@ -1,4 +1,4 @@
-# Classe para carregar a home do google
+# Classe para carregar a home do google!
 class Homegoogle
   include Capybara::DSL
   def load_page
