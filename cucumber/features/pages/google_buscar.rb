@@ -4,8 +4,7 @@ class Googlebusca
 
 
   def busca (cruzeiro)
-    @cruzeiro = cruzeiro
-    fill_in id: 'lst-ib', with: @cruzeiro
+    fill_in id: 'lst-ib', with: cruzeiro
     find(:id, 'hplogo').click
     find('[name=btnK]').click
   end
