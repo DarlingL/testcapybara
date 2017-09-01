@@ -25,7 +25,7 @@ cucumber
 ```
 
 ### Gerar Relatório HTML ###
-Dentro do diretório testcapybara/cucumber execute:
+Dentro do diretório testcapybara/cucumber/reports execute:
 ```shell
 cucumber -p html_report
 ```
