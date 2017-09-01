@@ -5,10 +5,9 @@ Dado(/^que esteja na Home do google$/) do
   @googleactions = Googlebusca.new
 end
 
-Quando(/^realizada uma busca por Cruzeiro Globo Esporte$/) do
-  @googleactions.busca
+Quando(/^realizada uma busca por (.*)$/) do |cruzeiro|
+  @googleactions.busca(cruzeiro) 
 end
-
 Quando(/^selecionado o primeiro resultado$/) do
   @googleactions.seleciona
 end
@@ -16,3 +15,4 @@ end
 Entao(/^estarei na pagina do melhor time do mundo$/) do
   @googleactions.confirma
 end
+

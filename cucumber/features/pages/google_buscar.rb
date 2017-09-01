@@ -2,17 +2,21 @@
 class Googlebusca
   include Capybara::DSL
 
-  def busca
-    fill_in id: 'lst-ib', with: 'Cruzeiro Globo Esporte'
+
+  def busca (cruzeiro)
+    @cruzeiro = cruzeiro
+    fill_in id: 'lst-ib', with: @cruzeiro
     find(:id, 'hplogo').click
-    find(:xpath, '//*[@id="tsf"]/div[2]/div[3]/center/input[1]').click
+    find('[name=btnK]').click
   end
 
-  def seleciona
+  def seleciona  
     click_on 'cruzeiro | GloboEsporte.com'
   end
 
-  def confirma
+  def confirma 
     page.has_content?(:class ['header-editoria--link ellip-line'])
   end
 end
+
+
