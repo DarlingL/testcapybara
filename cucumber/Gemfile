@@ -1,9 +1,11 @@
-# frozen_string_literal: true
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+# git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "cucumber", '2.4.0'
-gem "capybara", '2.14.4'
-gem "selenium-webdriver", '3.4.4'
-gem "chromedriver-helper", '1.1.0'﻿
+gem "cucumber", '2.3.3'
+gem "capybara"
+gem "selenium-webdriver"
+gem "chromedriver-helper", '1.1.0'
+
