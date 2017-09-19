@@ -1,4 +1,5 @@
-# testcapybara
+# testcapybara [![Circle CI](https://circleci.com/gh/DarlingL/testcapybara.svg?style=shield)]
+(https://circleci.com/gh/DarlingL/testcapybara)
 
 Automação Simples utilizando o Cucumber + Capybara
 
